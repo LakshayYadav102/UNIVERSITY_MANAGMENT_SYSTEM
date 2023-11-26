@@ -6,6 +6,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import jakarta.servlet.http.Cookie;
 
 @WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet {
@@ -30,6 +31,11 @@ public class LoginServlet extends HttpServlet {
 
         // Check if the provided username and password match any valid credentials
         if (validCredentials.containsKey(username) && validCredentials.get(username).equals(password)) {
+            // Store user information in cookies
+            Cookie usernameCookie = new Cookie("username", username);
+            usernameCookie.setMaxAge(3600); // Cookie will expire in 1 hour (you can adjust this as needed)
+            response.addCookie(usernameCookie);
+
             // Redirect to success page
             response.sendRedirect("index.jsp");
         } else {
