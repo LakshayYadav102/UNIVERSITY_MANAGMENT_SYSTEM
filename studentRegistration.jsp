@@ -4,29 +4,37 @@
     <title>Student Registration</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('studentregistration.jpg'); /* Add your background image URL */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
         }
         h1 {
             color: #007BFF;
+            text-align: center;
+            padding-top: 50px;
         }
         form {
             max-width: 400px;
             margin: 20px auto;
+            background-color: rgba(0, 0, 0, 0.6); /* Black with 60% transparency */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            color: #fff; /* Text color for better visibility */
         }
         label {
             display: block;
             margin-bottom: 5px;
         }
-        input {
+        input, select {
             width: 100%;
             padding: 8px;
             margin-bottom: 10px;
-        }
-        select {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 10px;
+            box-sizing: border-box;
         }
         button {
             background-color: #007BFF;
@@ -34,6 +42,8 @@
             padding: 10px;
             border: none;
             cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
         }
     </style>
 </head>
